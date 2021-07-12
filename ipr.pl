@@ -1,7 +1,7 @@
 
-open(fh,"<TRS_IGV30_random1_bf_run_avg_five.tsv");
-open(fh1,"+<annotation_1");
-open(fh2,"+>TRS_IGV30_random1_bf_run_avg_five_annotate");
+open(fh,"<TRS_IGV30_random1_bf_run_avg_five.tsv"); #file1
+open(fh1,"+<annotation_1"); #file2
+open(fh2,"+>TRS_IGV30_random1_bf_run_avg_five_annotate"); #output file
 
 @c = <fh>; 
 $b1 = join ("",@c);
@@ -77,7 +77,7 @@ print fh2 "$d1[$s]\t$d2[$s]\t$d3[$s]\t$d4[$s]\t$d5[$s]\t$d6[$s]\t$d7[$s]\t$d8[$s
 for ($T=0;$T<scalar @a1;$T++)
 {
 
-if($l[$T] eq $d1[$s]) 
+if($l[$T] eq $d1[$s]) ## compare two columns of different files
 { #print "2";
 print fh2 "$a1[$T]\t$d6[$s]\n";
 }
