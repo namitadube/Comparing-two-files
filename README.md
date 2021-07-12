@@ -1,5 +1,5 @@
 # Comparing two different columns in two different columns
 
-## In unix to run the program
+## Run program in unix environment
 perl ipr.pl
 
